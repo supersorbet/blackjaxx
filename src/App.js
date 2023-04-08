@@ -27,7 +27,7 @@ class App extends Component {
             var playerAccount = web3.currentProvider.selectedAddress;
 
             // Get the contract instance.
-            const contractAddress = 0x9f8c03a5037D0242B0d032b68d5c211114409961;
+            const contractAddress = "0x9f8c03a5037D0242B0d032b68d5c211114409961";
             const gameInstance = new web3.eth.Contract(
                 BlackjackContract.abi,
                 contractAddress || (gameNetwork && gameNetwork.address),
