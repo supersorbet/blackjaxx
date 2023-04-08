@@ -27,12 +27,12 @@ class App extends Component {
             var playerAccount = web3.currentProvider.selectedAddress;
 
             // Get the contract instance.
-            const networkId = await web3.eth.net.getId();
-            const gameNetwork = BlackjackContract.networks[networkId];
+            const contractAddress = 0x9f8c03a5037D0242B0d032b68d5c211114409961;
             const gameInstance = new web3.eth.Contract(
                 BlackjackContract.abi,
-                gameNetwork && gameNetwork.address,
+                contractAddress || (gameNetwork && gameNetwork.address),
             );
+            
             // Set web3, accounts, and contract to the state, and then proceed with an
             // example of interacting with the contract's methods.
             const responseGame = await gameInstance.methods.getGameState().call();
