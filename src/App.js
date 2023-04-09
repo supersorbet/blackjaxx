@@ -3,6 +3,7 @@ import BlackjackContract from "./Blackjack.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
+import {contractAddress} from './config'
 
 class App extends Component {
 
@@ -30,10 +31,10 @@ class App extends Component {
             const contractAddress = "0x9f8c03a5037D0242B0d032b68d5c211114409961";
             const gameInstance = new web3.eth.Contract(
                 BlackjackContract.abi,
-                contractAddress || (gameNetwork && gameNetwork.address),
+                contractAddress
             );
             
-            // Set web3, accounts, and contract to the state, and then proceed with an
+            
             // example of interacting with the contract's methods.
             const responseGame = await gameInstance.methods.getGameState().call();
             this.setState({ web3, playerAccount, game: gameInstance, maxBet: responseGame.gameMaxBet });

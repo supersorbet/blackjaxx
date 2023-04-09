@@ -450,4 +450,4 @@ export const contractABI = [
   ]
 ];
 
-export const contractAddress = 0x9f8c03a5037D0242B0d032b68d5c211114409961; // Replace with your contract address
+export const contractAddress = 0x9f8c03a5037D0242B0d032b68d5c211114409961;
