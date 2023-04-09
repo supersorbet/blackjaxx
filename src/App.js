@@ -3,7 +3,7 @@ import BlackjackContract from "./Blackjack.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
-import {contractAddress} from './config'
+import contractAddress from './config'
 
 class App extends Component {
 
